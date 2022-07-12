@@ -3,7 +3,7 @@ import dateParser, {
     defFormat as defDateFormat,
 } from "./utils/dateParser";
 
-export default {
+export {
     // date parser
     dateParser,
     dateZero,

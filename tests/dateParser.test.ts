@@ -1,4 +1,4 @@
-import dateParser, { dateZero, defFormat } from "../utils/dateParser";
+import { dateParser, dateZero, defDateFormat } from "../index";
 
 describe("dateParser", () => {
 
@@ -50,7 +50,7 @@ describe("dateParser", () => {
     });
 
     it("test invalid with default result", () => {
-        const parse = dateParser("invalid", defFormat, "invalid date");
+        const parse = dateParser("invalid", defDateFormat, "invalid date");
         expect(parse).toBe("invalid date");
     });
 
