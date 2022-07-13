@@ -1,10 +1,13 @@
 {
   "name": "@hfrada/futils",
-  "version": "1.0.2",
-  "main": "index.js",
+  "version": "1.0.3",
+  "main": "index.ts",
   "repository": "https://github.com/hfrada/futils.git",
   "author": "hfrada <madefrada@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "t": "jest"
