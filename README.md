@@ -40,6 +40,32 @@ The available formats are as follows:
 | ss | 30 |
 | ms | 40 |
 
+### Date From Now
+
+```javascript
+// dateParser.js
+import { dateFromNow } from "@hfrada/futils";
+
+const date = new Date().getTime() - 10_000;
+const parse = dateFromNow(date); // 10 detik lalu
+```
+
+Type of `date` is a string, number or Date. Result will be a subtract string from the current date with the date from the parameter.
+
+| Param | Type | Required | Default |
+| :-----| :--- | :------- | :------ |
+| `date` | `string` \| `number` \| `Date` | true | undefined  |
+
+The available results are as follows:
+| Interval | Result |
+| :----- | :----- |
+| year | 1 tahun lalu  |
+| month | 3 bulan lalu |
+| day | 10 hari lalu |
+| hour | 5 jam lalu |
+| minute | 10 menit lalu |
+| second | 20 detik lalu |
+
 ### Debounce
 ```javascript
 // debounce.js

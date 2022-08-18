@@ -1,4 +1,4 @@
-import { dateParser, dateZero, defDateFormat } from "../index";
+import { dateFromNow, dateParser, dateZero, defDateFormat } from "../index";
 
 describe("dateParser", () => {
 
@@ -60,5 +60,51 @@ describe("dateParser", () => {
 
         expect(addZero).toBe("01");
         expect(justToString).toBe("10");
+    });
+
+    describe("test dateFromNow each result", () => {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth();
+        const day = now.getDate();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+
+        it("test interval year", () => {
+            const date = new Date(year - 1, 0);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 tahun lalu");
+        });
+
+        it("test interval month", () => {
+            const date = new Date(year, month - 1);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 bulan lalu");
+        });
+
+        it("test interval day", () => {
+            const date = new Date(year, month, day - 1);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 hari lalu");
+        });
+
+        it("test interval hour", () => {
+            const date = new Date(year, month, day, hour - 1);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 jam lalu");
+        });
+
+        it("test interval minute", () => {
+            const date = new Date(year, month, day, hour, minute - 1);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 menit lalu");
+        });
+
+        it("test interval second", () => {
+            const date = new Date(year, month, day, hour, minute, second - 1);
+            const diffYear = dateFromNow(date);
+            expect(diffYear).toBe("1 detik lalu");
+        });
     });
 });

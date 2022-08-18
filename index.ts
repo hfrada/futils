@@ -1,4 +1,5 @@
 import dateParser, {
+    dateFromNow,
     dateZero,
     defFormat as defDateFormat,
 } from "./utils/dateParser";
@@ -10,6 +11,7 @@ export {
     dateParser,
     dateZero,
     defDateFormat,
+    dateFromNow,
 
     // debounce
     debounce,

@@ -44,3 +44,40 @@ export default function dateParser (datetime: DateParam, format = defFormat, def
         .replace(/ss/g, dateZero(date.getSeconds()))
         .replace(/ms/g, date.getMilliseconds().toString());
 }
+
+export function dateFromNow(datetime: DateParam) {
+    const date = new Date(datetime);
+    const seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
+  
+    // interval year
+    let interval = seconds / 31536000;
+    if (interval > 1) {
+      return Math.floor(interval) + " tahun lalu";
+    }
+
+    // interval month
+    interval = seconds / 2592000;
+    if (interval > 1) {
+      return Math.floor(interval) + " bulan lalu";
+    }
+
+    // interval day
+    interval = seconds / 86400;
+    if (interval > 1) {
+      return Math.floor(interval) + " hari lalu";
+    }
+
+    // interval hour
+    interval = seconds / 3600;
+    if (interval > 1) {
+      return Math.floor(interval) + " jam lalu";
+    }
+
+    // interval minute
+    interval = seconds / 60;
+    if (interval > 1) {
+      return Math.floor(interval) + " menit lalu";
+    }
+
+    return Math.floor(seconds) + " detik lalu";
+}
