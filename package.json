@@ -1,6 +1,6 @@
 {
   "name": "@hfrada/futils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.ts",
   "repository": "https://github.com/hfrada/futils.git",
   "author": "hfrada <madefrada@gmail.com>",
