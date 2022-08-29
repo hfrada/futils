@@ -15,9 +15,10 @@
 // file.js
 import { fileTypeCheck } from "@hfrada/futils";
 
+const checker = ["images", ".jpg, .png",];
 const isValid = fileTypeCheck(file, checker); // true/false
 ```
-Type of `file` is a File. Type of `checker` is a Array with value in index 0 is type file in MIME types and index 1 is optional allowable format in string. Result will be a boolean.
+Type of `file` is a File. Type of `checker` is a Array. Value index 0 of `checker` is type file in Discrete <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> types before. Value index index 1 of `checker` is optional allowable format file in string. Result will be a boolean.
 
 | Param | Type | Required | Default |
 | :-----| :--- | :------- | :------ |
