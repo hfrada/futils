@@ -6,6 +6,7 @@ simple javascript utility
 | Utility | Func Name |
 | :-------| :-------- |
 | date parser | dateParser  |
+| date from now | dateFromNow |
 | debounce | debounce |
 | delay | sleep |
 
@@ -65,6 +66,9 @@ The available results are as follows:
 | hour | 5 jam lalu |
 | minute | 10 menit lalu |
 | second | 20 detik lalu |
+
+### File
+documentation <a href="FILE.md">here</a>
 
 ### Debounce
 ```javascript
