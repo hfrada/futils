@@ -1,3 +1,4 @@
+import { dateArray } from "./utils/dateArray";
 import dateParser, {
     dateFromNow,
     dateZero,
@@ -15,6 +16,9 @@ import {
 import sleep from "./utils/sleep";
 
 export {
+    // dateArray
+    dateArray,
+
     // date parser
     dateParser,
     dateZero,

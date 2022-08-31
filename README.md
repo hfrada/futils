@@ -7,6 +7,7 @@ simple javascript utility
 | :-------| :-------- |
 | date parser | dateParser  |
 | date from now | dateFromNow |
+| date array | dateArray |
 | debounce | debounce |
 | delay | sleep |
 
@@ -41,6 +42,7 @@ The available formats are as follows:
 | ss | 30 |
 | ms | 40 |
 
+
 ### Date From Now
 
 ```javascript
@@ -67,8 +69,23 @@ The available results are as follows:
 | minute | 10 menit lalu |
 | second | 20 detik lalu |
 
+### Date Array
+```javascript
+// dateArray.js
+import { dateArray } from "@hfrada/futils";
+
+const ranges = dateArray(startDate, endDate); // [Date, ..., Date]
+```
+Date Array is used to create date ranges. The length is based on the `startDate` and `endDate` parameters. The parameter `startDate` has type Date and cannot be greater than `endDate`. The `endDate` parameter has type Date and its value must be greater than or equal to `startDate`.
+
+| Param | Type | Required | Default |
+| :-----| :--- | :------- | :------ |
+| `startDate` | `Date` | true | undefined  |
+| `endDate` | `Date` | true | undefined  |
+
 ### File
 documentation <a href="FILE.md">here</a>
+
 
 ### Debounce
 ```javascript
